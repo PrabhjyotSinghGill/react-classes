@@ -11,14 +11,17 @@ export default class TodoItem extends Component {
                 'line-through' : 'none'
             }
     }
-
-  render() {
-    return (
-      <div style={this.getStyle()}>
-          <p>{this.props.todo.title}</p>
-      </div>
-    )
-  }
+    
+    render() {
+        return (
+        <div style={this.getStyle()}>
+                <p>
+                <input type="checkbox" onChange={this.props.markComplete}></input>
+                {this.props.todo.title}
+                </p>
+        </div>
+        )
+    }
 }
 // PropTypes
 TodoItem.propTypes = {

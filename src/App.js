@@ -23,12 +23,15 @@ class App extends Component {
       }
     ]
   }
+  markComplete = () =>{
+    console.log('from app.js')
+  }
 
   render() {
     console.log(this.state.todos);
     return (
       <div>
-        <Todos todos={this.state.todos}></Todos>
+        <Todos todos={this.state.todos} markComplete={this.markComplete}></Todos>
       </div>
     )
   }
